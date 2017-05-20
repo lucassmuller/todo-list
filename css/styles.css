@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box; 
+}
+    
+body {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+hr {
+    margin: 0;
+}
+
+h1.titulo {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+#topo {
+    margin-bottom: 10px;
+}
+
+#tarefas input[type="checkbox"] {
+    display: none;
+}
+
+#tarefas input[type="checkbox"] + label {
+    font-size: 30px;
+}
+
+#tarefas input[type="checkbox"]:checked + label {
+    color: #bbb;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+#tarefas input[type="checkbox"] + label::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 3px solid teal;
+    border-radius: 5px;
+    float: left;
+    margin-right: 15px;
+    transition-duration: 200ms;
+    position: relative;
+    top: 12px;
+}
+
+#tarefas input[type="checkbox"]:checked + label::before {
+    content: "";
+    width: 12px;
+    height: 22px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 3px solid green;
+    border-right: 3px solid green;
+    transform: rotate(405deg);
+    margin-left: 8px;
+}
+
+#tarefas svg {
+    width: 30px;
+    height: auto;
+    position: relative;
+    top: 10px;
+    transition: .2s;
+}
+
+#tarefas svg:hover {
+    fill: red;
+}
+
+form#addTarefa {
+    margin-top:15px;
+}
+
+form#addTarefa input {
+    width: calc(100% - 141px);
+    background-color: rgba(0,0,0,0.02);
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    padding: 4px;
+    transition: .2s;
+}
+
+form#addTarefa input.invalid {
+    background-color: rgba(255,0,0,0.05);
+    border: 1px solid red;
+}
+
+form#addTarefa input:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+form#addTarefa input:focus {
+    outline-width: 0;
+    border-radius: 5px;
+    border: 1px solid teal;
+    background-color: rgba(0,0,0,0.05);
+}
+
+form#addTarefa button[type="submit"] {
+    background-color: teal;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    padding: 4px;
+    width: 135px;
+    transition: .2s;
+}
+
+form#addTarefa button[type="submit"]:disabled {
+    color: #bbb;
+}
